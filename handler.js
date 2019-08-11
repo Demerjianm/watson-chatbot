@@ -3,6 +3,7 @@
 const getMessage = require('./service').getMessage
 
 module.exports.hello = async (event, context) => {
+  console.log('just event', event)
   console.log('event body', event.body)
   try {
     const output = await getMessage(JSON.parse(event.body))
