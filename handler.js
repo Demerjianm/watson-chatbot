@@ -9,7 +9,7 @@ module.exports.hello = async (event, context) => {
     console.log('the outpput', output)
     return {
       statusCode: 200,
-      body: output
+      body: JSON.stringify(output)
     }
   } catch (next) {
     console.log('the error', next)
