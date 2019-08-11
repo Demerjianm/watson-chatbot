@@ -12,14 +12,18 @@ const App = () => {
   }
 
   async function postData() {
-    let apiName = 'chatbot-dev-hello'
+    let apiName = 'hello'
     let path = '/chatbot-dev-hello'
     let myInit = {
       // OPTIONAL
-      body: { input: 'welcome' }, // replace this with attributes you need
-      headers: { 'content-type': 'application/json' } // OPTIONAL
+      body: JSON.stringify({ input: 'welcome' }),
+      headers: {
+        Accept: '*/*',
+        'Content-Type': 'application/json'
+      } // OPTIONAL
     }
-    return await API.post(apiName, path, { body: { input: 'welcome' } })
+    const body = { input: 'welcome' }
+    return await API.post(apiName, path, myInit)
   }
 
   const onSubmit = async () => {
@@ -34,7 +38,7 @@ const App = () => {
         <form
           onSubmit={e => {
             e.preventDefault()
-            onSubmit()
+            postData()
           }}
         >
           <input value={info.value} onChange={onChange} name="info" />

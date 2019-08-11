@@ -9,9 +9,10 @@ API.configure({
   API: {
     endpoints: [
       {
-        name: 'chatbot-dev-hello',
+        name: 'hello',
         endpoint:
-          'https://e4ykknqgk3.execute-api.us-east-1.amazonaws.com/default'
+          'https://e4ykknqgk3.execute-api.us-east-1.amazonaws.com/default',
+        region: 'us-east-1'
       }
     ]
   }
