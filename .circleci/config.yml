@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.10
+      - image: circleci/node:10
 
     working_directory: ~/repo
 
@@ -29,7 +29,7 @@ jobs:
 
       - run:
           name: Deploy dev api
-          command: sls deploy --stage pre
+          command: sls deploy
 
 workflows:
   version: 2
