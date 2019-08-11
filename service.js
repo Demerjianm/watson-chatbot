@@ -20,7 +20,7 @@ exports.getMessage = body =>
           console.log(err)
           reject(err)
         } else {
-          resolve(response)
+          return response
         }
       }
     )
