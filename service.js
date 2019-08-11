@@ -7,21 +7,28 @@ const assistant = new watson({
   url: process.env.ASSISTANT_URL
 })
 
-exports.getMessage = body =>
-  new Promise((resolve, reject) => {
+exports.getMessage = async body => {
+  // new Promise((resolve, reject) => {
+  try {
     console.log(body)
-    assistant.message(
-      {
-        workspace_id: process.env.WATSON_WORKSPACE_ID,
-        input: { text: body.input }
-      },
-      function(err, response) {
-        if (err) {
-          console.log(err)
-          reject(err)
-        } else {
-          return response
-        }
-      }
-    )
-  })
+    const res = await assistant.message({
+      workspace_id: process.env.WATSON_WORKSPACE_ID,
+      input: { text: body.input }
+    })
+    console.log('the repsonse', res)
+    return res
+  } catch (e) {
+    throw e
+  }
+}
+//   ,
+//   function(err, response) {
+//     if (err) {
+//       console.log(err)
+//       reject(err)
+//     } else {
+//       return response
+//     }
+//   }
+// )
+// })
