@@ -10,7 +10,7 @@ const App = () => {
     console.log(e.target)
     setInfo({ info: e.target.value })
   }
-
+  console.log(API)
   async function postData() {
     let apiName = 'hello'
     let path = '/chatbot-dev-hello'

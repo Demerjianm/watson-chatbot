@@ -10,6 +10,10 @@ module.exports.hello = async (event, context) => {
     console.log('the outpput', output)
     return {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+        'Access-Control-Allow-Credentials': true // Required for cookies, authorization headers with HTTPS
+      },
       body: JSON.stringify(output)
     }
   } catch (next) {
