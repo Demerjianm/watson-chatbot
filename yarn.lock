@@ -1874,10 +1874,10 @@ ibm-cloud-sdk-core@^0.3.5:
     semver "^6.2.0"
     vcap_services "~0.3.4"
 
-ibm-watson@^4.3.3:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/ibm-watson/-/ibm-watson-4.3.3.tgz#6fc9db98bc561e3228905795b8fd7441ea4a4a06"
-  integrity sha512-bqpGWxowHb24B4lAuGfLXZstx30vCG0rNUVoO5BLJnMQK+IBc9jtSEV8Fbm+ExuGcWdvI2UFxemylExqAHO9WA==
+ibm-watson@^4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/ibm-watson/-/ibm-watson-4.5.1.tgz#a81528bbc49c8448f4fb15fef7465197fff5efff"
+  integrity sha512-ACA/e2vpT09zAWxmmBmczF9pj024HYqTuWWtWyv9y6GGTQWwOXtc5zhMJfXuZD9Xb/Vy4HzTcmlwJlLfvFSTqg==
   dependencies:
     "@types/csv-stringify" "^1.4.3"
     "@types/extend" "^3.0.1"
